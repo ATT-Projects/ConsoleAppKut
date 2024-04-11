@@ -1,8 +1,7 @@
 using System.Text.RegularExpressions;
 
 
-Task2 t2 = new Task2();
-t2.task10_1();
+
 
 public class Tasks1 { 
 public void task1_1() {

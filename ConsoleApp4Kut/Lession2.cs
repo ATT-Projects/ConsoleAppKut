@@ -9,12 +9,12 @@ namespace ConsoleApp4Kut
     internal class Lession2
     {
         public void task1() {
-            String name = "Andrey";
+            string name = "Andrey";
             Console.WriteLine($"Hello \n {name}");    
         }
-        public void task2() {
-            int a = 10;
-            int b = 5;
+        public void task2(int frs, int sec) {
+            int a = frs;
+            int b = sec;
             Console.WriteLine($"{a} + {b} = {a+b}");
             Console.WriteLine($"{a} - {b} = {a - b}");
             Console.WriteLine($"{a} / {b} = {a / b}");
@@ -23,12 +23,12 @@ namespace ConsoleApp4Kut
         public void task3()
         {
             int a = 10;
-            String s = a.ToString();
+            string s = a.ToString();
         }
         public void task4()
         {
-            String s = "10";
-            float f = float.Parse( s );
+            string s = "10";
+            float f = float.Parse(s);
         }
         public void task5() { 
             int a = 10;
