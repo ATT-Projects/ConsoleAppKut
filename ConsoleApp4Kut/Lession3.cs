@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -38,6 +38,23 @@ namespace ConsoleApp4Kut
         }
         public void task3()
         {
+            char[] bukvi = { 'б', 'в', 'г', 'д', 'ж', 'з', 'й', 'к', 'л', 'м', 'н', 'п', 'р', 'с', 'т', 'ф', 'х', 'ч', 'ш', 'щ' };
+            char c = 'а';
+            bool isGlas = true;
+            for (int i = 0; i < bukvi.Length - 1 ; i++) { 
+            if (c.Equals(bukvi[i]))
+            {
+                isGlas = false;
+                break;
+            }
+        }
+            if (isGlas)
+            {
+                Console.WriteLine("Гласная");
+            }
+            else {
+                Console.WriteLine("Согласная");
+            }
 
         }
         public void task4()
@@ -82,7 +99,19 @@ namespace ConsoleApp4Kut
             }
         }
         public void task7() {
-        
+            char c = 'f';
+            if (char.IsDigit(c))
+            {
+                Console.WriteLine("Цифра");
+            }
+            else if (char.IsLetter(c))
+            {
+                Console.WriteLine("Буква");
+            }
+            else
+            {
+                Console.WriteLine("Специальный символ");
+            }
         }
         public void task8()
         {
@@ -128,6 +157,17 @@ namespace ConsoleApp4Kut
         }
         public void task9()
         {
+            int year = 1999;
+            int vek = (year / 100) + 1;
+            if (vek == 20)
+            {
+                Console.WriteLine("XX ВЕК");
+            } else if (vek == 21) {
+                Console.WriteLine("XXI ВЕК");
+            } else
+            {
+                Console.WriteLine("Какой-то другой век");
+            }
 
         }
         public void task10()
@@ -142,7 +182,16 @@ namespace ConsoleApp4Kut
         }
         public void task11()
         {
-
+            char c = 'а';
+            switch (c)
+            {
+                case char a when(a >= 'A' && a <= 'Я'): 
+                    Console.WriteLine("Заглавная"); 
+                    break;
+                case char a when (a >= 'а' && a <= 'я'):
+                    Console.WriteLine("строчная");
+                    break;
+            }
         }
         public void task12() {
             int m = 4;
@@ -340,10 +389,88 @@ namespace ConsoleApp4Kut
                     break;
             }
         }
-        public void task17() { }
-        public void task18() { }
-        public void task19() { }
-        public void task20() { }
-
+        public void task17(int day, int year, int month) {
+            DateOnly date = new DateOnly(year, month, day);
+            switch (date.DayOfWeek) { 
+                case DayOfWeek.Monday:
+                        Console.WriteLine("Понедельник");
+                        break;
+                case DayOfWeek.Tuesday:
+                    Console.WriteLine("Вторник");
+                    break;
+                case DayOfWeek.Wednesday:
+                    Console.WriteLine("Среда");
+                    break;
+                case DayOfWeek.Thursday:
+                    Console.WriteLine("Четверг");
+                    break;
+                case DayOfWeek.Friday:
+                    Console.WriteLine("Пятница");
+                    break;
+                case DayOfWeek.Saturday:
+                    Console.WriteLine("Суббота");
+                    break;
+                case DayOfWeek.Sunday:
+                    Console.WriteLine("Воскресенье");
+                     break;
+            }
+        
+        }
+        public void task18() {
+            int month = 10;
+            int year = 2005;
+            if (month > 0 && year > 0) { 
+            switch (month)
+                {
+                    case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+                        Console.WriteLine(31);
+                        break;
+                    case 2:
+                        if ((year % 4 == 0) && ((year % 100 == 0) && (year % 400 == 0))) {
+                            Console.WriteLine(28);
+                            break;
+                        } else {
+                            Console.WriteLine(29);
+                            break; 
+                        }
+                    case 4: case 6: case 9: case 11:
+                        Console.WriteLine(30);
+                        break;
+                }
+            }
+        }
+        public void task19() {
+            int time = 15;
+            switch(time)
+            {
+                case int n when(n>= 0 && n <=3):
+                        Console.WriteLine("Ночь");
+                        break;
+                case int n when (n >= 4 && n <= 9):
+                    Console.WriteLine("Утро");
+                    break;
+                case int n when (n >= 10 && n <= 15):
+                    Console.WriteLine("День");
+                    break;
+                case int n when (n >= 16 && n <= 21):
+                    Console.WriteLine("Вечер");
+                    break;
+                case int n when (n >= 22 && n <= 24):
+                    Console.WriteLine("Вечер");
+                    break;
+                default:
+                    Console.WriteLine("Вне диапазона");
+                    break;
+            }
+        }
+        public void task20() {
+            int year = 2000;
+            if (year % 100 == 0)
+            {
+                Console.WriteLine("Вековой");
+            }
+            else Console.WriteLine("Не вековой");
+        }
+        
     }
 }
