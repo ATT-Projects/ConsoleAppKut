@@ -258,7 +258,7 @@ namespace ConsoleApp4Kut
             int positiveCount = 0;
             int negativeCount = 0;
     
-            Console.WriteLine("Enter three integers:");
+            
             num1 = int.Parse(Console.ReadLine());
             num2 = int.Parse(Console.ReadLine());
             num3 = int.Parse(Console.ReadLine());
@@ -278,8 +278,8 @@ namespace ConsoleApp4Kut
             else if (num3 < 0)
                 negativeCount++;
 
-        Console.WriteLine($"Number of positive integers: {positiveCount}");
-        Console.WriteLine($"Number of negative integers: {negativeCount}");
+        Console.WriteLine($"положительные: {positiveCount}");
+        Console.WriteLine($"отрицательные: {negativeCount}");
             
         }
         public static void task5_2() { 
@@ -411,12 +411,63 @@ namespace ConsoleApp4Kut
                 }
             }
         }
-        public static void task7_1() { }
-        public static void task7_2() { }
-        public static void task7_3() { }
-        public static void task8_1() { }
+        public static void task7_1() {
+            int a = 0;
+            int b = 0;
+            if(a>b){
+                Console.WriteLine(2);
+            } else Console.WriteLine(1);
+        }
+        public static void task7_2() { 
+            int a = 0;
+            int b = 0;
+            int c = 0;
+            if((a>b>c) || (a<b<c)){
+                a *= 2;
+                b *= 2;
+                c *= 2;
+            } else{
+                a *= -1;
+                b *= -1;
+                c *= -1;
+            }
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+            Console.WriteLine(c);
+        }
+
+        public static void task7_3() { 
+            int x = 0;
+            if(x>0){
+                Console.WriteLine(2*Math.Sin(x));
+            } else{
+                Console.WriteLine(6-x);
+            }
+        }
+        public static void task8_1() {
+            int a = 0;
+            int b = 0;
+            if(a>b){
+                Console.WriteLine(a);
+                Console.WriteLine(b);
+            } else{
+                Console.WriteLine(b);
+                Console.WriteLine(a);
+            }
+            
+        }
         public static void task8_2() { }
-        public static void task8_3() { }
+        public static void task8_3() {
+            int x = 0;
+            if((x < - 2) || x > 2){
+                // \ 0_o /
+                //    |
+                // / *|* \
+                //    | 
+                //    #
+                Console.WriteLine(2*x);
+            } else  Console.WriteLine(-3*x);
+        }
         public static void task9_1() { }
         public static void task9_2() { }
         public static void task9_3() { }
